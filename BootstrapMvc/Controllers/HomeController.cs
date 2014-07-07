@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BootstrapMvc.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace BootstrapMvc.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var tbl = new List<Foo> {
+                new Foo { Title="First", Description="First desc"},
+                new Foo { Title="Second", Description="Second desc"},
+                new Foo { Title="Third", Description="Third desc"}
+            };
+            return View(tbl);
         }
     }
 }

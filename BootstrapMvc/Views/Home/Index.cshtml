@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<BootstrapMvc.Models.Foo>
+@using GridMvc.Html
+@{
     ViewBag.Title = "Index";
 }
 
@@ -72,13 +74,16 @@
                         </select>
                     </div>
                 </div>
-
-
-
-
-
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+    <div class="col-md-6">
+        @Html.Grid(Model).Columns(columns =>
+            {
+                columns.Add(foo => foo.Title).Titled("Custom column title").SetWidth(110);
+                columns.Add(foo => foo.Description).Sortable(true);
+            }).WithPaging(20)
     </div>
 </div>
 
