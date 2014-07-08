@@ -1,0 +1,174 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBell.cshtml";
+    ViewBag.Title = "Detail";
+}
+<style>
+    .bl_row_info label {
+        font-size: 14px;
+    }
+
+    .bl_row_info .label {
+        font-weight: normal;
+        font-size: 18px;
+    }
+</style>
+@section BellTop {
+    <div class="panel panel-default">
+        <div class="panel-body" style="background-color: rgb(0, 102, 164)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 font30">
+                        <span class="label">Job List > Job #23422</span>
+                    </div>
+                    <div class="col-md-5">
+                        <button type="button" class="btn btn-default font18">
+                            <span class="glyphicon glyphicon-pencil"></span> Edit Job
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 4px; background-color: darkred"></div>
+    </div>
+}
+<div class="row">
+    <div class="col-md-9">
+        <div class="row bl_row_info">
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Status</label>
+
+                        <span class="label label-danger center-block">Behind</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Estimated Close Time</label>
+
+                        <span class="label label-default center-block">Fri 03/14 - 6:35p</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Time Spent</label>
+
+                        <span class="label label-default center-block">1hr 25min</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Agent</label>
+                        <span class="label label-default center-block">Donald Frankson</span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Skillset</label>
+                        <span class="label label-success">Skill One</span>
+                        <span class="label label-success">Another Skill</span>
+                        <span class="label label-success">Third Skill</span>
+                        <span class="label label-danger">Missing Skill</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#details" role="tab" data-toggle="tab">Details</a></li>
+                    <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li><a href="#correspondance" role="tab" data-toggle="tab">Correspondance</a></li>
+                    <li><a href="#request" role="tab" data-toggle="tab">Original Request</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="details">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <dl>
+                                        <dt>Customer Name</dt>
+                                        <dd>Stephen Uptonson</dd>
+                                    </dl>
+                                    @*<address>
+                                            <strong>Twitter, Inc.</strong><br>
+                                            795 Folsom Ave, Suite 600<br>
+                                            San Francisco, CA 94107
+                                        </address>*@
+                                    <dl>
+                                        <dt>Address</dt>
+                                        <dd>
+                                            <address>
+                                                665 Yorkville Street<br />
+                                                Apt. 322<br />
+                                                Toronto, Ontario<br />
+                                                M3R 1E9
+                                            </address>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Telephone Number</dt>
+                                        <dd>(416) 345-9485</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Email</dt>
+                                        <dd>stephen@theuptonson.com</dd>
+                                    </dl>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl>
+                                        <dt>Work Type</dt>
+                                        <dd>Order for Data Circuit</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Follow Up Date</dt>
+                                        <dd>Thurs, Oct 25, 2014</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="profile">
+                    </div>
+                    <div class="tab-pane" id="correspondance">
+                    </div>
+                    <div class="tab-pane" id="request">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well">
+            <label>Timeline</label>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+    </div>
+
+</div>
+
+@section JavaScriptFooter {
+    <script>
+    </script>
+}

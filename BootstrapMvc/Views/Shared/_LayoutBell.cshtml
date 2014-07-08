@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Bell Application</title>
     <style>
         body {
-            padding-top: 80px;
+            padding-top: 52px;
         }
 
         .has-error .error {
@@ -21,11 +21,40 @@
     <link rel="stylesheet" media="all" href="~/Content/jquery-ui-timepicker-addon.css" />
     <link rel="stylesheet" href="http://fabien-d.github.io/alertify.js/assets/js/lib/alertify/alertify.core.css" />
     <link rel="stylesheet" href="http://fabien-d.github.io/alertify.js/assets/js/lib/alertify/alertify.default.css" />
+    <style>
+        .font36 {
+            font-size: 36px;
+        }
+
+        .font30 {
+            font-size: 30px;
+        }
+
+        .font24 {
+            font-size: 24px;
+        }
+
+        .font18 {
+            font-size: 18px;
+        }
+
+        .font14 {
+            font-size: 14px;
+        }
+
+        .font12 {
+            font-size: 12px;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+    </style>
 
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,32 +62,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Bootstrap Call Center", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="/"><img src="/logo_bell.gif" height="28" /></a>
+                @*@Html.ActionLink("Bell", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li>@Html.ActionLink("Job Detail", "Detail", "Job")</li>
-                    <li><a href="/Home/About">About</a></li>
+                <ul class="nav navbar-nav font14">
+                    <li><a href="/">Job List <span class="badge bg-red">88</span></a></li>
+                    <li><a href="/">Agents</a></li>
+                    <li><a href="/">Forms</a></li>
+                    <li><a href="/">Settings</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/Account/Register" id="registerLink">Register</a></li>
-                    <li><a href="/Account/Login" id="loginLink">Log in</a></li>
-                </ul>
+                <form class="navbar-form navbar-right" role="form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search..." class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Go</button>
+                </form>
+                @*<ul class="nav navbar-nav navbar-right">
+                        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+                        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+                    </ul>*@
             </div>
         </div>
     </div>
+    @RenderSection("BellTop", false)
 
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Bootstrap is open source</p>
+            <p>&copy; Bell @DateTime.Now.Year</p>
         </footer>
     </div>
 
     @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>*@
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
     <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
